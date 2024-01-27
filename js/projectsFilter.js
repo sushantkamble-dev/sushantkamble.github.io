@@ -39,7 +39,7 @@ const projects = [
   {
     title: "Cozy Craft",
     tags: "Augmented Reality, WebXR",
-    link: "",
+    link: "/cozy-craft.html",
     imageURL: "images/thumbnails/ar-app.png",
     projectType: "ar-vr",
   },
@@ -105,7 +105,7 @@ function populateProjectFilters(currentState) {
 
   buttonContainer.innerHTML = buttonContents
     .map(
-      ({ title, stateTag }) => `<p class="gsap-reveal-hero px-3">
+      ({ title, stateTag }) => `<p class="px-3">
     <a
       onclick="toggleState('${stateTag}')"
       target="_blank"
@@ -129,7 +129,7 @@ function populateProjects(currentState) {
             class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
             <a
               href="${link}"
-              class="portfolio-item ajax-load-page isotope-item gsap-reveal-img"
+              class="portfolio-item isotope-item"
               data-id="1">
               <div class="overlay">
                 <span class="wrap-icon icon-link2"></span>
