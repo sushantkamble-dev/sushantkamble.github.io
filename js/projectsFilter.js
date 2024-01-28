@@ -48,7 +48,7 @@ const projects = [
   {
     title: "Kanban Board - Trello Clone",
     tags: "Web Application, React JS, Firebase",
-    link: "",
+    link: "/kanban-board.html",
     imageURL: "images/thumbnails/kanban-board.png",
     projectType: "web-app",
   },
