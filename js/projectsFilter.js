@@ -55,7 +55,7 @@ const projects = [
   {
     title: "Art Spark Texas Dance",
     tags: "UX Case Study, Figma",
-    link: "",
+    link: "/art-spark-dance.html",
     imageURL: "images/thumbnails/art-spark-dance.png",
     projectType: "ux-ui",
   },
