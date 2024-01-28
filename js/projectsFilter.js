@@ -23,19 +23,20 @@ const buttonContents = [
 
 const projects = [
   {
+    title: "Elixir Expedition",
+    tags: "Virtual Reality, Unity",
+    link: "/elixir-expedition.html",
+    imageURL: "images/thumbnails/treasure-hunt.png",
+    projectType: "ar-vr",
+  },
+  {
     title: "Paw Finder",
     tags: "Web Application, Next.js, MongoDB",
     link: "",
     imageURL: "images/thumbnails/paw-finder.png",
     projectType: "web-app",
   },
-  {
-    title: "Kanban Board - Trello Clone",
-    tags: "Web Application, React JS, Firebase",
-    link: "",
-    imageURL: "images/thumbnails/kanban-board.png",
-    projectType: "web-app",
-  },
+  
   {
     title: "Cozy Craft",
     tags: "Augmented Reality, WebXR",
@@ -45,11 +46,11 @@ const projects = [
   },
 
   {
-    title: "Elixir Expedition",
-    tags: "Virtual Reality, Unity",
+    title: "Kanban Board - Trello Clone",
+    tags: "Web Application, React JS, Firebase",
     link: "",
-    imageURL: "images/thumbnails/treasure-hunt.png",
-    projectType: "ar-vr",
+    imageURL: "images/thumbnails/kanban-board.png",
+    projectType: "web-app",
   },
   {
     title: "Art Spark Texas Dance",
