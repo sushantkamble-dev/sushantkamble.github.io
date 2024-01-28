@@ -32,7 +32,7 @@ const projects = [
   {
     title: "Paw Finder",
     tags: "Web Application, Next.js, MongoDB",
-    link: "",
+    link: "/paw-finder.html",
     imageURL: "images/thumbnails/paw-finder.png",
     projectType: "web-app",
   },
