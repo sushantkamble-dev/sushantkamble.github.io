@@ -62,29 +62,22 @@ const projects = [
   {
     title: "News Bites",
     tags: "UX Case Study, Figma",
-    link: "",
+    link: "/news-bites.html",
     imageURL: "images/thumbnails/news-bites.png",
     projectType: "ux-ui",
   },
   {
     title: "Stray Clone",
     tags: "PC Game, Unity, Blender",
-    link: "",
+    link: "/stray-clone.html",
     imageURL: "images/thumbnails/cat.png",
     projectType: "3d-model",
   },
   {
     title: "M1911 Pistol",
     tags: "3D Model, Blender",
-    link: "",
+    link: "/gun-model.html",
     imageURL: "images/thumbnails/pistol.png",
-    projectType: "3d-model",
-  },
-  {
-    title: "Donut & Coffee",
-    tags: "3D Model, Blender",
-    link: "",
-    imageURL: "images/thumbnails/donut-coffee.png",
     projectType: "3d-model",
   },
 ];
