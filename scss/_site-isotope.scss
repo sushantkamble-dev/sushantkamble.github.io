@@ -64,7 +64,7 @@
 			bottom: 0;
 		}
 		&:before {
-			background: rgba($black, .5);
+			background: rgba($black, 0.8);
 			content: "";
 		}
 	}
@@ -85,10 +85,10 @@
 			padding: 0;
 		}
 		h3 {
-			font-size: 18px;
+			font-size: 20px;
 		}
 		p {
-			font-size: 12px;
+			font-size: 16px;
 			color: rgba($white, .5);
 			// font-family: $font-family-sans-serif-secondary;
 		}

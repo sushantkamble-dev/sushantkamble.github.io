@@ -24,14 +24,14 @@ const buttonContents = [
 const projects = [
   {
     title: "Elixir Expedition",
-    tags: "Virtual Reality, Unity",
+    tags: "Virtual Reality, Unity, Blender",
     link: "/elixir-expedition.html",
     imageURL: "images/thumbnails/treasure-hunt.png",
     projectType: "ar-vr",
   },
   {
     title: "Paw Finder",
-    tags: "Web Application, Next.js, MongoDB",
+    tags: "Web Application, Next.js, MongoDB, Figma",
     link: "/paw-finder.html",
     imageURL: "images/thumbnails/paw-finder.png",
     projectType: "web-app",
@@ -39,7 +39,7 @@ const projects = [
   
   {
     title: "Cozy Craft",
-    tags: "Augmented Reality, WebXR",
+    tags: "Augmented Reality, WebXR, Blender",
     link: "/cozy-craft.html",
     imageURL: "images/thumbnails/ar-app.png",
     projectType: "ar-vr",
@@ -47,7 +47,7 @@ const projects = [
 
   {
     title: "Kanban Board - Trello Clone",
-    tags: "Web Application, React JS, Firebase",
+    tags: "Web Application, React JS, Firebase, Figma",
     link: "/kanban-board.html",
     imageURL: "images/thumbnails/kanban-board.png",
     projectType: "web-app",
@@ -128,7 +128,7 @@ function populateProjects(currentState) {
               <div class="overlay">
                 <span class="wrap-icon icon-link2"></span>
                 <div class="portfolio-item-content">
-                  <h3 style="font-family:'Montserrat', sans-serif;margin-bottom: 10px;font-size: 16px;font-weight: bold;">${title}</h3>
+                  <h3 style="font-family:'Montserrat', sans-serif;margin-bottom: 10px;font-weight: bold;">${title}</h3>
                   <p>${tags}</p>
                 </div>
               </div>
