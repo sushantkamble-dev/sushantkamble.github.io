@@ -1,9 +1,5 @@
 const buttonContents = [
   {
-    title: "All",
-    stateTag: "all",
-  },
-  {
     title: "Web App",
     stateTag: "web-app",
   },
@@ -16,18 +12,25 @@ const buttonContents = [
     stateTag: "ux-ui",
   },
   {
-    title: "3D Model",
-    stateTag: "3d-model",
+    title: "Sandbox",
+    stateTag: "sandbox",
   },
 ];
 
 const projects = [
   {
     title: "Elixir Expedition",
-    tags: "Virtual Reality, Unity, Blender",
+    tags: "Virtual Reality, Unity, Blender, C#",
     link: "/elixir-expedition.html",
     imageURL: "images/thumbnails/treasure-hunt.png",
     projectType: "ar-vr",
+  },
+  {
+    title: "Cozy Craft",
+    tags: "Augmented Reality,Javascript, WebXR, Three.js, Blender",
+    link: "/cozy-craft.html",
+    imageURL: "images/thumbnails/ar-app.png",
+    projectType: "web-app",
   },
   {
     title: "Paw Finder",
@@ -36,10 +39,9 @@ const projects = [
     imageURL: "images/thumbnails/paw-finder.png",
     projectType: "web-app",
   },
-  
   {
     title: "Cozy Craft",
-    tags: "Augmented Reality, WebXR, Blender",
+    tags: "Augmented Reality,Javascript, WebXR, Three.js, Blender",
     link: "/cozy-craft.html",
     imageURL: "images/thumbnails/ar-app.png",
     projectType: "ar-vr",
@@ -71,14 +73,14 @@ const projects = [
     tags: "PC Game, Unity, Blender",
     link: "/stray-clone.html",
     imageURL: "images/thumbnails/cat.png",
-    projectType: "3d-model",
+    projectType: "sandbox",
   },
   {
     title: "M1911 Pistol",
     tags: "3D Model, Blender",
     link: "/gun-model.html",
     imageURL: "images/thumbnails/pistol.png",
-    projectType: "3d-model",
+    projectType: "sandbox",
   },
 ];
 
@@ -118,7 +120,7 @@ function populateProjects(currentState) {
   projectContainer.innerHTML = "";
   projectContainer.innerHTML = projects
     .map(({ title, tags, link, imageURL, projectType }) => {
-      if (currentState === "all" || currentState === projectType) {
+      if (currentState === projectType) {
         return `<div
             class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
             <a
@@ -146,4 +148,4 @@ function populateProjects(currentState) {
     projectContainer.style.height = "fit-content";
 }
 
-document.addEventListener("DOMContentLoaded", toggleState("all"));
+document.addEventListener("DOMContentLoaded", toggleState("web-app"));
