@@ -205,5 +205,28 @@
 
     <script src="js/custom.js"></script>
     <script src="js/projectsFilter.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAwVV5EpKG00o6YRQn259xjVj7CVN1NebM",
+        authDomain: "portfolio-website-2be1b.firebaseapp.com",
+        projectId: "portfolio-website-2be1b",
+        storageBucket: "portfolio-website-2be1b.appspot.com",
+        messagingSenderId: "623760306088",
+        appId: "1:623760306088:web:88d67430331a4d12a9379d",
+        measurementId: "G-SLT4Z5Z8K5"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
