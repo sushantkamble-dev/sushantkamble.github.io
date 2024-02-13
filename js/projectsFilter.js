@@ -46,7 +46,13 @@ const projects = [
     imageURL: "images/thumbnails/ar-app.png",
     projectType: "ar-vr",
   },
-
+  {
+    title: "Portal to Snowy Mountains",
+    tags: "Augmented Reality,Bezi",
+    link: "/portal-snowy-mountains.html",
+    imageURL: "images/thumbnails/portal-snowy-mountains.png",
+    projectType: "ar-vr",
+  },
   {
     title: "Kanban Board - Trello Clone",
     tags: "Web Application, React JS, Firebase, Figma",
