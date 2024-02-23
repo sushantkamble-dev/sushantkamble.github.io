@@ -54,6 +54,13 @@ const projects = [
     projectType: "ar-vr",
   },
   {
+    title: "Workshop: Blending Realities",
+    tags: "Mixed Reality,Bezi",
+    link: "/workshop-blending-realities.html",
+    imageURL: "images/thumbnails/portal-snowy-mountains.png",
+    projectType: "ar-vr",
+  },
+  {
     title: "Kanban Board - Trello Clone",
     tags: "Web Application, React JS, Firebase, Figma",
     link: "/kanban-board.html",

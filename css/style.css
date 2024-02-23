@@ -1484,8 +1484,11 @@ figure.dotted-bg:before {
   margin-bottom: 30px;
 }
 .custom-block .section-title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
+}
+.custom-block p, .custom-block li {
+  text-align: justify;
 }
 
 .custom-accordion .accordion-item {

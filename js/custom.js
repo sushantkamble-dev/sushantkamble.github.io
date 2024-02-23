@@ -598,6 +598,22 @@ var owlSingleSlider = function () {
 
 })
 
+$('[data-fancybox="gallery"]').each(function() {
+	$(this).fancybox({
+	  // Hide all buttons
+	  btnTpl: {
+		// Override default button templates with empty strings
+		close: '',
+		smallBtn: '',
+		zoom: '',
+		download: '',
+		fullScreen: '',
+		share: '',
+		thumbs: ''
+	  }
+	});
+  });
+  
 
 
 
