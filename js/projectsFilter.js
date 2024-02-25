@@ -47,13 +47,6 @@ const projects = [
     projectType: "ar-vr",
   },
   {
-    title: "Portal to Snowy Mountains",
-    tags: "Augmented Reality,Bezi",
-    link: "/portal-snowy-mountains.html",
-    imageURL: "images/thumbnails/portal-snowy-mountains.png",
-    projectType: "ar-vr",
-  },
-  {
     title: "Workshop: Blending Realities",
     tags: "Mixed Reality,Bezi",
     link: "/workshop-blending-realities.html",
