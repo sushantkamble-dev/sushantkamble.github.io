@@ -492,9 +492,8 @@
 
 
             </div>
-            <!-- #endregion Tool selection -->
-
           </div>
+          <!-- #endregion Tool selection -->
 
           <!-- #region Solidifying a concept -->
           <div class="row justify-content-between mb-4">
@@ -551,10 +550,14 @@
                 <h2 class="section-title text-black">Figma Integration</h2>
                 <br />
                 <p>
-                  Our goal was to familiarize participants with the <strong>Figma integration feature</strong> through a customizable card inspired by the <a>Spacial UI design toolkit</a>.
+                  Our goal was to familiarize participants with the <strong>Figma integration feature</strong> through a
+                  customizable card inspired by the <a>Spacial UI design toolkit</a>.
                 </p>
                 <p>
-                  This allowed participants to personalize their experience by adding their names, selecting profile pictures, and describing two virtual environments that they could later create using an AI-based Skybox Generator called <a href="" target="_blank">Blockade Labs</a>.
+                  This allowed participants to <strong>personalize their experience</strong> by adding their names,
+                  selecting profile
+                  pictures, and describing two virtual environments that they could later create using an AI-based
+                  Skybox Generator called <a href="" target="_blank">Blockade Labs</a>.
                 </p>
                 <p>
                   The card was designed with the following objectives in mind:
@@ -564,13 +567,14 @@
                   <li>
                     Enabling participants to <strong>express their identity and individuality</strong>.
                   </li>
-                  <br/>
+                  <br />
                   <li>
                     Serving as a <strong>keepsake or memento</strong> of the event.
                   </li>
-                  <br/>
+                  <br />
                   <li>
-                    Providing a platform for <strong>creative expression</strong> and <strong>adding an element of fun and enjoyment</strong> to the event
+                    Providing a platform for <strong>creative expression</strong> and <strong>adding an element of fun
+                      and enjoyment</strong> to the event
                   </li>
                 </ul>
 
@@ -589,7 +593,120 @@
 
           </div>
           <!-- #endregion Figma Integration -->
+
           <!-- #endregion Crafting the prototype -->
+
+          <!-- #region Performance Optimization -->
+
+          <!-- #region Title -->
+          <div class="row mb-4">
+            <div class="col-lg-12 text-center mx-auto">
+              <div class="custom-block" data-aos="fade-up">
+                <h2 class="section-heading  mb-4">
+                  <strong>Performance Optimization</strong>
+                </h2>
+                <div class="wave">
+                  <svg>
+                    <path d="M10,10 L50,100 L90,50" stroke="#0389ff"></path>
+                  </svg>
+                </div>
+                <p>
+                  Optimizing the performance of a web-based graphics tool is essential for ensuring <strong>smooth user
+                    experiences</strong> and <strong>efficient utilization of resources</strong>. Even though Bezi is
+                  pushing the boundaries of web graphics capabilities, designing with <a
+                    href="https://bezi3d.notion.site/Optimizing-Your-Scene-for-Headsets-4bc1cac16209414083e584e782932551"
+                    target="_blank">optimization guidlines provided by Bezi</a> in mind, and adhering to the <a href=""
+                    target="_blank">"Keep it simple, stupid" (KISS)
+                    design principles</a>, ensures a smooth VR headset experience, maintaining a refresh rate of 90 Hz.
+                </p>
+
+              </div>
+            </div>
+          </div>
+          <!-- #endregion Title -->
+
+          <!-- #region Texture Compression -->
+          <div class="row justify-content-between mb-4">
+            <div class="col-md-6 order-2 order-md-1">
+              <div class="custom-block" data-aos="fade-up">
+                <h2 class="section-title text-black">Texture Compression</h2>
+                <br />
+                <p>
+                  Large texture file sizes can significantly impact performance in VR environments. To address this
+                  challenge, the following steps were implemented: </p>
+                <ui>
+                  <li>
+                    The skyboxes obtained from <a href="https://www.blockadelabs.com/" target="_blank">Blockhead
+                      Labs</a> are 6144x3072px in resolution and approximately <strong>25MB</strong> in size. Utilizing
+                    <a href="https://imagecompressor.com/" target="_blank">Optimizilla's online image optimizer</a>, the
+                    image size was reduced to approximately <strong>7MB</strong>, resulting in a <strong>reduction of
+                      71%</strong> without significant loss in quality.
+                  </li>
+                  <br />
+                  <li>
+                    Steel and wood textures were also compressed using the same tool mentioned above. These <strong>
+                      textures were then reused</strong> for both the portal and the balcony within the portal,
+                    minimizing resource overhead.
+                  </li>
+
+                </ui>
+
+              </div>
+            </div>
+            <div class="col-md-6 order-1 order-md-2">
+              <div class="custom-block" data-aos="fade-up">
+                <div class=" mb-3">
+                  <span class="icon-service"><img src="media/blending-realities/texture optimization.png" alt="Image"
+                      class="img-fluid" /></span>
+                </div>
+                <p class="text-center">Screenshot from Optimizilla</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- #endregion Texture Compression -->
+
+          <!-- #region Optimizing Startup Latency -->
+          <div class="row justify-content-between mb-4">
+            <div class="col-md-6 order-2 order-md-2">
+              <div class="custom-block" data-aos="fade-up">
+                <h2 class="section-title text-black">Optimizing Startup Latency</h2>
+                <br />
+                <ul>
+
+                  <li>
+                    The initial lag in VR scene loading arises from multiple factors such as <strong>time-consuming
+                      process of loading assets</strong> like textures, models, and animations.
+                  </li>
+                  <br />
+                  <li>
+                    Upon entering VR mode via the Bezi link in the headset, a noticeable delay occurred as the scene
+                    loaded into memory. It was later determined that the <strong>high-resolution skybox texture was the
+                      cause</strong> of this issue, particularly on the Meta Quest 2 platform.
+                  </li>
+                  <br />
+                  <li>
+                    To address this problem, we utilized the <strong>state machine feature</strong> to prevent the
+                    skybox from loading initially. Instead, it is displayed only when the user clicks a button to change
+                    the state, thus minimizing the delay and enhancing the overall experience.
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="col-md-6 order-1 order-md-1">
+              <div class="custom-block" data-aos="fade-up">
+                <video autoplay loop style="width: 100%;">
+                  <source src="media/blending-realities/state-machine.mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+          </div>
+          <!-- #endregion Optimizing Startup Latency -->
+
+          <!-- #endregion Performance Optimization -->
         </div>
       </div>
 
