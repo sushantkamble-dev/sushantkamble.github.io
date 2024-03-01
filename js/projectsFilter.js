@@ -19,18 +19,18 @@ const buttonContents = [
 
 const projects = [
   {
+    title: "Workshop: Blending Realities",
+    tags: "Mixed Reality,Bezi",
+    link: "/workshop-blending-realities.html",
+    imageURL: "images/thumbnails/portal-snowy-mountains.png",
+    projectType: "ar-vr",
+  },
+  {
     title: "Elixir Expedition",
     tags: "Virtual Reality, Unity, Blender, C#",
     link: "/elixir-expedition.html",
     imageURL: "images/thumbnails/treasure-hunt.png",
     projectType: "ar-vr",
-  },
-  {
-    title: "Cozy Craft",
-    tags: "Augmented Reality,Javascript, WebXR, Three.js, Blender",
-    link: "/cozy-craft.html",
-    imageURL: "images/thumbnails/ar-app.png",
-    projectType: "web-app",
   },
   {
     title: "Paw Finder",
@@ -39,20 +39,14 @@ const projects = [
     imageURL: "images/thumbnails/paw-finder.png",
     projectType: "web-app",
   },
-  {
+   {
     title: "Cozy Craft",
-    tags: "Augmented Reality,Javascript, WebXR, Three.js, Blender",
+    tags: "Augmented Reality, Javascript, WebXR, Three.js, Blender",
     link: "/cozy-craft.html",
     imageURL: "images/thumbnails/ar-app.png",
     projectType: "ar-vr",
-  },
-  {
-    title: "Workshop: Blending Realities",
-    tags: "Mixed Reality,Bezi",
-    link: "/workshop-blending-realities.html",
-    imageURL: "images/thumbnails/portal-snowy-mountains.png",
-    projectType: "ar-vr",
-  },
+  }, 
+
   {
     title: "Kanban Board - Trello Clone",
     tags: "Web Application, React JS, Firebase, Figma",
@@ -67,7 +61,7 @@ const projects = [
     imageURL: "images/thumbnails/art-spark-dance.png",
     projectType: "ux-ui",
   },
-  {
+   {
     title: "News Bites",
     tags: "UX Case Study, Figma",
     link: "/news-bites.html",
@@ -98,7 +92,7 @@ function toggleState(stateTag) {
     const newUrl = window.location.pathname + "?" + urlParams.toString();
     history.pushState(null, "", newUrl);
   }
-  populateProjectFilters(stateTag);
+  //populateProjectFilters(stateTag);
   populateProjects(stateTag);
 }
 
@@ -126,7 +120,7 @@ function populateProjects(currentState) {
   projectContainer.innerHTML = "";
   projectContainer.innerHTML = projects
     .map(({ title, tags, link, imageURL, projectType }) => {
-      if (currentState === projectType) {
+      if (/* currentState === projectType */ true) {
         return `<div
             class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
             <a
