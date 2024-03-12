@@ -396,3 +396,13 @@
 	border-bottom: 1px solid #dee2e6
   }
 }
+.custom-card,h5{
+  transition: .3s all ease;
+}
+.custom-card:hover {
+  border-color: $primary;
+  cursor: pointer;
+  h5 {
+    color: $primary;
+  }
+}

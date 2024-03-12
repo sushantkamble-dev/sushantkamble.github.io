@@ -1846,6 +1846,18 @@ figure.dotted-bg:before {
   border-bottom: 1px solid #dee2e6;
 }
 
+.custom-card, h5 {
+  transition: 0.3s all ease;
+}
+
+.custom-card:hover {
+  border-color: #0389ff;
+  cursor: pointer;
+}
+.custom-card:hover h5 {
+  color: #0389ff;
+}
+
 .site-footer {
   padding: 70px 0;
 }

@@ -19,68 +19,25 @@ const buttonContents = [
 
 const projects = [
   {
-    title: "Workshop: Blending Realities",
-    tags: "Mixed Reality,Bezi",
+    title: "Blending Realities",
+    tags: ["Augmented Reality","Prototyping","Bezi","Figma"],
     link: "/workshop-blending-realities.html",
     imageURL: "images/thumbnails/portal-snowy-mountains.png",
-    projectType: "ar-vr",
+    describtion:"Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
   },
   {
     title: "Elixir Expedition",
-    tags: "Virtual Reality, Unity, Blender, C#",
+    tags: ["Virtual Reality", "Unity", "Blender", "C#"],
     link: "/elixir-expedition.html",
     imageURL: "images/thumbnails/treasure-hunt.png",
-    projectType: "ar-vr",
+    describtion:"Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
   },
   {
-    title: "Paw Finder",
-    tags: "Web Application, Next.js, MongoDB, Figma",
-    link: "/paw-finder.html",
-    imageURL: "images/thumbnails/paw-finder.png",
-    projectType: "web-app",
-  },
-   {
-    title: "Cozy Craft",
-    tags: "Augmented Reality, Javascript, WebXR, Three.js, Blender",
-    link: "/cozy-craft.html",
-    imageURL: "images/thumbnails/ar-app.png",
-    projectType: "ar-vr",
-  }, 
-
-  {
-    title: "Kanban Board - Trello Clone",
-    tags: "Web Application, React JS, Firebase, Figma",
-    link: "/kanban-board.html",
-    imageURL: "images/thumbnails/kanban-board.png",
-    projectType: "web-app",
-  },
-  {
-    title: "Art Spark Texas Dance",
-    tags: "UX Case Study, Figma",
-    link: "/art-spark-dance.html",
-    imageURL: "images/thumbnails/art-spark-dance.png",
-    projectType: "ux-ui",
-  },
-   {
-    title: "News Bites",
-    tags: "UX Case Study, Figma",
-    link: "/news-bites.html",
-    imageURL: "images/thumbnails/news-bites.png",
-    projectType: "ux-ui",
-  },
-  {
-    title: "Stray Clone",
-    tags: "PC Game, Unity, Blender",
-    link: "/stray-clone.html",
-    imageURL: "images/thumbnails/cat.png",
-    projectType: "sandbox",
-  },
-  {
-    title: "M1911 Pistol",
-    tags: "3D Model, Blender",
-    link: "/gun-model.html",
-    imageURL: "images/thumbnails/pistol.png",
-    projectType: "sandbox",
+    title: "Clarista",
+    tags: ["Virtual Reality", "Unity", "Blender", "C#"],
+    link: "/elixir-expedition.html",
+    imageURL: "images/thumbnails/treasure-hunt.png",
+    describtion:"Data collaboration platform Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
   },
 ];
 
@@ -119,33 +76,44 @@ function populateProjects(currentState) {
   const projectContainer = document.getElementById("posts");
   projectContainer.innerHTML = "";
   projectContainer.innerHTML = projects
-    .map(({ title, tags, link, imageURL, projectType }) => {
-      if (/* currentState === projectType */ true) {
-        return `<div
-            class="item web branding col-sm-6 col-md-6 col-lg-4 isotope-mb-2">
-            <a
-              href="${link}"
-              class="portfolio-item isotope-item"
-              data-id="1">
-              <div class="overlay">
-                <span class="wrap-icon icon-link2"></span>
-                <div class="portfolio-item-content">
-                  <h3 style="font-family:'Montserrat', sans-serif;margin-bottom: 10px;font-weight: bold;">${title}</h3>
-                  <p>${tags}</p>
-                </div>
-              </div>
-              <img
-                src="${imageURL}"
-                class="lazyload img-fluid"
-                alt="Images"
-              />
-            </a>
-          </div>`;
+    .map(({ title, tags, link, imageURL }) => {
+
+      let tagsList =""
+      tags.forEach((item)=>{
+        tagsList = tagsList + (`
+        <p style="background-color: #CDE7FF; font-size: 14px; border-radius: 8px;padding: 5px 10px 5px 10px; margin-right: 10px;">
+                  ${item}
+                </p>
+        `)
+      })
+        return `
+        <div class="col-md-4 order-2 order-md-1">
+        <div class="custom-block" data-aos="fade-up">
+        <a href="${link}" style="color:black;">
+          <div class="card custom-card">
+            <span class="icon-service">
+            <img src="${imageURL}" alt="Image"
+                class="img-fluid" /></span>
+            <div class="card-body" style="text-align: left;padding-bottom: 4px;">
+              <h5 class="section-title" style="font-size: 20px;">${title}</h5>
+
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                the
+                card's content.</p>
+                
+              <div style="display: flex;flex-direction: row;flex-wrap: wrap; color:#0389ff;">
+              ${tagsList}
+            </div>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>`;
       }
-    })
+    )
     .join("");
 
-    projectContainer.style.height = "fit-content";
+  projectContainer.style.height = "fit-content";
 }
 
 document.addEventListener("DOMContentLoaded", toggleState("web-app"));
