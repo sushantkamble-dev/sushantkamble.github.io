@@ -367,7 +367,6 @@ $(function(){
 		});
 
 	}
-	siteIstotope();
 
 
 	var siteGSAPRevealHero = function() {

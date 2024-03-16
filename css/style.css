@@ -423,7 +423,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   color: rgba(0, 0, 0, 0.5);
 }
 .site-nav.dark .site-navigation .site-menu > li > a:hover {
-  color: #000000;
+  color: #0389ff;
 }
 .site-nav.dark .site-navigation .site-menu > li.active > a {
   color: #000000;

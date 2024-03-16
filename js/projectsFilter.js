@@ -19,26 +19,34 @@ const buttonContents = [
 
 const projects = [
   {
+    title: "No Code Editor for data transformation",
+    tags: ["Web App","React JS","Bootstrap","Figma","Notion"],
+    link: "./no-code-editor.html",
+    imageURL: "images/thumbnails/no-code-editor.png",
+    describtion:"Intuitive drag-and-drop interface,offering users the ability to conduct data transformations effortlessly, without the need for coding."
+  },
+  {
     title: "Blending Realities",
-    tags: ["Augmented Reality","Prototyping","Bezi","Figma"],
+    tags: ["Mixed Reality","Bezi","Figma","Notion"],
     link: "/workshop-blending-realities.html",
-    imageURL: "images/thumbnails/portal-snowy-mountains.png",
-    describtion:"Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+    imageURL: "images/thumbnails/blending-realities.png",
+    describtion:"Hands-on workshop aimed to introduce participants to the realms of AR,VR and MR, Enabling them to build their own MR Experiences."
+  },
+/*   {
+    title: "Dashboard Builder",
+    tags: ["Web App","React JS","Bootstrap","Figma","Notion"],
+    link: "/",
+    imageURL: "images/thumbnails/dashboard-builder.png",
+    describtion:"Drag-and-drop dashboard and analytics builder"
   },
   {
     title: "Elixir Expedition",
     tags: ["Virtual Reality", "Unity", "Blender", "C#"],
     link: "/elixir-expedition.html",
-    imageURL: "images/thumbnails/treasure-hunt.png",
-    describtion:"Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
-  },
-  {
-    title: "Clarista",
-    tags: ["Virtual Reality", "Unity", "Blender", "C#"],
-    link: "/elixir-expedition.html",
-    imageURL: "images/thumbnails/treasure-hunt.png",
-    describtion:"Data collaboration platform Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum"
-  },
+    imageURL: "images/thumbnails/elixir-expedition.png",
+    describtion:"Virtual Reality Game"
+  }, */
+
 ];
 
 function toggleState(stateTag) {
@@ -76,7 +84,7 @@ function populateProjects(currentState) {
   const projectContainer = document.getElementById("posts");
   projectContainer.innerHTML = "";
   projectContainer.innerHTML = projects
-    .map(({ title, tags, link, imageURL }) => {
+    .map(({ title, tags, link, imageURL,describtion }) => {
 
       let tagsList =""
       tags.forEach((item)=>{
@@ -87,7 +95,7 @@ function populateProjects(currentState) {
         `)
       })
         return `
-        <div class="col-md-4 order-2 order-md-1">
+        <div class="col-md-6 order-2 order-md-1">
         <div class="custom-block" data-aos="fade-up">
         <a href="${link}" style="color:black;">
           <div class="card custom-card">
@@ -97,9 +105,7 @@ function populateProjects(currentState) {
             <div class="card-body" style="text-align: left;padding-bottom: 4px;">
               <h5 class="section-title" style="font-size: 20px;">${title}</h5>
 
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                the
-                card's content.</p>
+              <p class="card-text">${describtion}</p>
                 
               <div style="display: flex;flex-direction: row;flex-wrap: wrap; color:#0389ff;">
               ${tagsList}
