@@ -23,40 +23,44 @@ const projects = [
     tags: ["Web App","React JS","Bootstrap","Figma","Notion"],
     link: "./no-code-editor.html",
     imageURL: "images/thumbnails/no-code-editor.png",
-    describtion:"Intuitive drag-and-drop interface,offering users the ability to conduct data transformations effortlessly, without the need for coding."
+    describtion:"Intuitive drag-and-drop interface,offering users the ability to conduct data transformations effortlessly, without the need for coding.",
+    disabled:false
   },
   {
     title: "Blending Realities",
     tags: ["Mixed Reality","Bezi","Figma","Notion"],
     link: "/workshop-blending-realities.html",
     imageURL: "images/thumbnails/blending-realities.png",
-    describtion:"Hands-on workshop aimed to introduce participants to the realms of AR,VR and MR, Enabling them to build their own MR Experiences."
+    describtion:"Hands-on workshop aimed to introduce participants to the realms of AR,VR and MR, Enabling them to build their own MR Experiences.",
+    disabled:false
   },
-/*   {
+   {
     title: "Dashboard Builder",
     tags: ["Web App","React JS","Bootstrap","Figma","Notion"],
-    link: "/",
+    link: "",
     imageURL: "images/thumbnails/dashboard-builder.png",
-    describtion:"Drag-and-drop dashboard and analytics builder"
+    describtion:"A drag-and-drop dashboard and chart builder enabling customization, ensuring layout consistency to streamline real-time dashboard analytics.",
+    disabled:true
   },
   {
     title: "Elixir Expedition",
     tags: ["Virtual Reality", "Unity", "Blender", "C#"],
     link: "/elixir-expedition.html",
     imageURL: "images/thumbnails/elixir-expedition.png",
-    describtion:"Virtual Reality Game"
-  }, */
+    describtion:"Immersive VR experience designed to quantify fear levels, sense of body ownership, and virtual presence.",
+    disabled:false
+  },
 
 ];
 
 function toggleState(stateTag) {
-  const urlParams = new URLSearchParams(window.location.search);
+/*   const urlParams = new URLSearchParams(window.location.search);
   const currentState = urlParams.get("projectsFilter");
   if (currentState !== stateTag.toString()) {
     urlParams.set("projectsFilter", stateTag.toString());
     const newUrl = window.location.pathname + "?" + urlParams.toString();
     history.pushState(null, "", newUrl);
-  }
+  } */
   //populateProjectFilters(stateTag);
   populateProjects(stateTag);
 }
@@ -84,7 +88,7 @@ function populateProjects(currentState) {
   const projectContainer = document.getElementById("posts");
   projectContainer.innerHTML = "";
   projectContainer.innerHTML = projects
-    .map(({ title, tags, link, imageURL,describtion }) => {
+    .map(({ title, tags, link, imageURL,describtion,disabled }) => {
 
       let tagsList =""
       tags.forEach((item)=>{
@@ -97,7 +101,7 @@ function populateProjects(currentState) {
         return `
         <div class="col-md-6 order-2 order-md-1">
         <div class="custom-block" data-aos="fade-up">
-        <a href="${link}" style="color:black;">
+        <a href="${link}" style="color:black;${disabled?"pointer-events:none":""}">
           <div class="card custom-card">
             <span class="icon-service">
             <img src="${imageURL}" alt="Image"
