@@ -258,8 +258,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 @media screen and (max-width: 767px) {
   .site-nav {
-    position: absolute;
+    position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    border-bottom: 1px solid #ddd;
     z-index: 7;
   }
   .site-nav ul {
@@ -273,8 +279,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   }
 }
 .site-nav {
-  position: absolute;
+  position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ddd;
   z-index: 7;
 }
 .site-nav a {
@@ -416,11 +428,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   content: "\e315";
   right: 20px;
 }
-.site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown, .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > ul {
+.site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown,
+.site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > ul {
   left: 100%;
   top: 0;
 }
-.site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown li a:hover, .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > ul li a:hover {
+.site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > .dropdown li a:hover,
+.site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children > ul li a:hover {
   color: #0389ff;
 }
 .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children:hover > a, .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children:active > a, .site-nav .site-navigation .site-menu .has-children .dropdown > li.has-children:focus > a {
@@ -646,7 +660,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 .sticky-wrapper .site-navbar .site-menu > li > a:hover, .sticky-wrapper .site-navbar .site-menu > li > a.active {
   color: #000000 !important;
 }
-.sticky-wrapper.is-sticky .burger:before, .sticky-wrapper.is-sticky .burger span, .sticky-wrapper.is-sticky .burger:after {
+.sticky-wrapper.is-sticky .burger:before,
+.sticky-wrapper.is-sticky .burger span,
+.sticky-wrapper.is-sticky .burger:after {
   background: #000000;
   transition: 0s all ease;
 }
@@ -679,11 +695,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   cursor: pointer;
   position: relative;
 }
-.burger.light:before, .burger.light span, .burger.light:after {
+.burger.light:before,
+.burger.light span, .burger.light:after {
   background: #ffffff;
 }
 
-.burger:before, .burger span, .burger:after {
+.burger:before,
+.burger span,
+.burger:after {
   width: 100%;
   height: 2px;
   display: block;
@@ -693,7 +712,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   opacity: 1;
 }
 
-.burger:before, .burger:after {
+.burger:before,
+.burger:after {
   transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
   -webkit-transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
   content: "";
@@ -725,7 +745,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   opacity: 0;
 }
 
-.burger.active:before, .burger.active:after {
+.burger.active:before,
+.burger.active:after {
   top: 40%;
 }
 
@@ -1221,6 +1242,7 @@ figure.dotted-bg:before {
   }
 }
 .portfolio-single-inner .heading-portfolio-single-h2 {
+  margin: 0px;
   font-weight: 900;
 }
 @media (max-width: 991.98px) {

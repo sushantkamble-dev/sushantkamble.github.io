@@ -476,6 +476,7 @@ figure {
 
 .portfolio-single-inner {
   .heading-portfolio-single-h2 {
+    margin: 0px;
     font-weight: 900;
     @include media-breakpoint-down(md) {
       font-size: 20px;
