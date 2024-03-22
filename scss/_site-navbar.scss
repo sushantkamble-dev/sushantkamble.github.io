@@ -7,6 +7,26 @@
 		color: $white;
 	}
 }
+
+@media screen and (max-width:767px){
+	.site-nav {
+		position: absolute;
+		width: 100%;
+		ul{
+
+			padding: 0px;
+		}
+		// left: 0;
+		z-index: 7;
+		a {
+			position: relative;
+			z-index: 9;
+			cursor: pointer;
+			padding: 0px;
+		}
+		
+	}	
+}
 .site-nav {
 	position: absolute;
 	width: 100%;
@@ -17,6 +37,7 @@
 		z-index: 9;
 		cursor: pointer;
 	}
+
 }
 
 .site-nav {	
@@ -38,6 +59,10 @@
 				> a {
 					font-size: 14px;
 					padding: 10px 15px;
+					@media screen and (max-width:767px){
+						padding-left: 10px ;
+						padding-right: 0px;
+					}
 					display: inline-block;
 					text-decoration: none!important;
 					color: rgba($white, .5);

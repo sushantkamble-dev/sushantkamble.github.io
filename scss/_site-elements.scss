@@ -9,6 +9,19 @@
     text-align: justify;
   }
 }
+@media screen and (max-width:767px){
+  .custom-block {
+    margin-bottom: 0px;
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    p,
+    li {
+      text-align: justify;
+    }
+  }
+}
 
 // accordion
 .custom-accordion {
@@ -409,4 +422,13 @@
 .carousel-control-next,
 .carousel-control-prev /*, .carousel-indicators */ {
     filter: invert(50%);
+}
+
+.profile-picture {
+  width: 100%;height: 100%;padding: 30px;
+}
+@media screen and (max-width:767px){
+  .profile-picture {
+    width: 100%;height: 100%; ;padding: 0px;
+  }
 }
