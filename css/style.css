@@ -797,6 +797,15 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   }
 }
 
+.mobile-margin-top-20 {
+  margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .mobile-margin-top-20 {
+    margin-top: 0px;
+  }
+}
+
 .section-heading {
   font-size: 30px;
   color: #000000;

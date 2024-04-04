@@ -26,9 +26,15 @@
     .mobile-margin-bot-0 {
       margin-bottom: 0px;
     }
+    
   }
 }
-
+.mobile-margin-top-20 {
+  margin-top: 50px;
+  @media screen and (max-width: 767px) {
+    margin-top: 0px;
+  }
+}
 .section-heading {
   font-size: 30px;
   color: $black;
