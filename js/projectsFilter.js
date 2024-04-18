@@ -123,7 +123,6 @@ function populateProjects(currentState) {
             <img src="${imageURL}" alt="Image"
                 class="img-fluid" /></span>
             <div class="card-body" style="text-align: left; padding-bottom: 4px;">
-              <h5 class="section-title" style="font-size: 20px;margin-bottom:20px;">${title}</h5>
                 
               <div style="display: flex; flex-direction: row; flex-wrap: wrap; color:#0389ff;">
               ${tagsList}

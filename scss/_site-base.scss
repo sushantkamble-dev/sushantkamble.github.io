@@ -89,9 +89,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     background: $black;
     color: $white;
     &:hover {
-      border-color: $black;
+      border-color: $primary;
       background: transparent;
-      color: $black;
+      color: $primary;
     }
   }
   &.btn-outline-black {

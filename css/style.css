@@ -106,9 +106,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   color: #ffffff;
 }
 .btn.btn-black:hover {
-  border-color: #000000;
+  border-color: #0389ff;
   background: transparent;
-  color: #000000;
+  color: #0389ff;
 }
 .btn.btn-outline-black {
   background: transparent;
